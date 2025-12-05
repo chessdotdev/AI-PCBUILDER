@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai-PcBuilder</title>
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Powered PC Builder</h1>
+        <form id="pc-builder-form">
+          <label for="budget">Enter Your Budget (₱):</label>
+          <input type="number" id="budget" placeholder="e.g., 4000" required>
+    
+          <label for="purpose">Purpose:</label>
+          <select id="purpose" required>
+            <option value="gaming">Gaming</option>
+            <option value="office">Office</option>
+            <option value="video editing">Video Editing</option>
+            <option value="streaming">Streaming</option>
+          </select>
+    
+          <label for="brand">Preferred Brand (e.g., AMD, Intel):</label>
+          <input type="text" id="brand" placeholder="e.g., AMD" required>
+    
+          <button type="submit">Generate PC Build</button>
+        </form>
+    
+        <div id="result" class="result" style="display: none;">
+          <div class="build-header">
+            <h3 id="build-name">Your PC Build</h3>
+            <span id="total-price" style="font-weight: bold;"></span>
+          </div>
+    
+          <div id="part-list" class="part-list"></div>
+        </div>
+      </div>
+</body>
+</html>
