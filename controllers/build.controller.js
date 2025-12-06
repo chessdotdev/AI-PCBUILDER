@@ -8,7 +8,7 @@ const client = new OpenAI({
 
 const generateBuild = async (req, res) => {
     try {
-        const { budget = "₱50000", purpose =  "Gaming and Streaming", brand = "AMD"} = req.body;
+        const { budget, purpose, brand} = req.body;
 const prompt = 
 `
     Generate a compatible PC build for these requirements:
@@ -37,6 +37,20 @@ const prompt =
       5. Storage (HDD/SSD)
       6. PSU (Power Supply Unit)
       7. Case
+
+      Return ONLY valid JSON with the following structure:
+
+    {
+    "CPU": "",
+    "GPU": "",
+    "RAM": "",
+    "Motherboard": "",
+    "Storage": "",
+    "PSU": "",
+    "Case": ""
+    }
+
+    No extra text, no explanations.
 `
 const chatCompletion = await client.chat.completions.create({
      model: 'openai/gpt-oss-safeguard-20b:groq',
@@ -48,11 +62,24 @@ const chatCompletion = await client.chat.completions.create({
     ],
 });
 
-console.log(chatCompletion.choices[0].message);
-const message = chatCompletion.choices[0].message
-return res.status(200).json({build: message});
+// console.log(chatCompletion.choices[0].message);
+console.log(chatCompletion.choices[0].message.content);
+const message = chatCompletion.choices[0].message.content;
+
+let build;
+try {
+    build = JSON.parse(message);
+} catch (error) {
+    return res.status(500).json({
+        message: "invalid JSON data",
+        // raw: message
+    });
+}
+
+return res.status(200).json({data: build});
+
     } catch (error) {
-        console.error(error); // debugging error
+        // console.error(error);
         res.status(500).json({
             message: "Internal Server Error"
         })
