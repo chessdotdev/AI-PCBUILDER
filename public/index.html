@@ -3,16 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>AI PC BUILDER</title>
-  <style>
-    #generate-build {
-      white-space: pre-line; 
-      background: #f4f4f4;
-      padding: 15px;
-      border-radius: 8px;
-      font-family: monospace;
-    }
-  </style>
 </head>
 <body>
   <h1>AI PC Build</h1>
@@ -44,57 +36,6 @@
     <span id="Case"></span>
   </div>   
 
-  <script>
-  const pcBuilderForm = document.getElementById('pc-builder-form')
-
-  pcBuilderForm.addEventListener('submit', async (e) =>{
-    event.preventDefault();
-
-     const budget = document.getElementById('budget').value;
-      const purpose = document.getElementById('purpose').value;
-      const brand = document.getElementById('brand').value;
-
-      async function pcBuilder() {
-      try {
-        // Example dummy data — replace with your real values
-        // const data = {
-        //   budget: 50000,
-        //   purpose: "gaming",
-        //   brand: "AMD"
-        // };
-
-        const response = await fetch('/api/build/pc-builder', {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({budget, purpose, brand})
-        });
-
-        const result = await response.json();
-
-        const build = result.data;
-
-        document.getElementById("CPU").textContent = build.CPU;
-        document.getElementById("GPU").textContent = build.GPU;
-        document.getElementById("RAM").textContent = build.RAM;
-        document.getElementById("Motherboard").textContent = build.Motherboard;
-        document.getElementById("Storage").textContent = build.Storage;
-        document.getElementById("PSU").textContent = build.PSU;
-        document.getElementById("Case").textContent = build.Case;
-      } catch (error) {
-        console.error("Error:", error);
-        document.getElementById("generate-build").textContent = "Failed to load PC build.";
-      }
-    }
-    await pcBuilder();
-    alert("PC build is ready!"); 
-
-  })
-
-
-    
-  
-
-
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
