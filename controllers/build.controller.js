@@ -51,6 +51,7 @@ const prompt =
     }
 
     No extra text, no explanations.
+    Don't Generate invalid Json.
 `
 const chatCompletion = await client.chat.completions.create({
      model: 'openai/gpt-oss-safeguard-20b:groq',
