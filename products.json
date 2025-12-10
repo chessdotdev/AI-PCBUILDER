@@ -1,0 +1,131 @@
+[
+    {
+      "name": "Intel Core i5-12400F",
+      "category": "CPU",
+      "brand": "Intel",
+      "price": 9500,
+      "socket": "LGA1700"
+    },
+    {
+      "name": "Intel Core i7-12700K",
+      "category": "CPU",
+      "brand": "Intel",
+      "price": 18500,
+      "socket": "LGA1700"
+    },
+    {
+      "name": "AMD Ryzen 5 5600X",
+      "category": "CPU",
+      "brand": "AMD",
+      "price": 12000,
+      "socket": "AM4"
+    },
+    {
+      "name": "AMD Ryzen 7 5800X",
+      "category": "CPU",
+      "brand": "AMD",
+      "price": 18000,
+      "socket": "AM4"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3060",
+      "category": "GPU",
+      "brand": "NVIDIA",
+      "price": 20000,
+      "power": 170
+    },
+    {
+      "name": "NVIDIA GeForce RTX 4070",
+      "category": "GPU",
+      "brand": "NVIDIA",
+      "price": 40000,
+      "power": 220
+    },
+    {
+      "name": "AMD Radeon RX 6700 XT",
+      "category": "GPU",
+      "brand": "AMD",
+      "price": 25000,
+      "power": 230
+    },
+    {
+      "name": "Corsair Vengeance LPX 16GB DDR4",
+      "category": "RAM",
+      "brand": "Corsair",
+      "price": 4500,
+      "type": "DDR4"
+    },
+    {
+      "name": "G.Skill Trident Z RGB 32GB DDR4",
+      "category": "RAM",
+      "brand": "G.Skill",
+      "price": 9000,
+      "type": "DDR4"
+    },
+    {
+      "name": "Kingston Fury Beast 16GB DDR5",
+      "category": "RAM",
+      "brand": "Kingston",
+      "price": 7500,
+      "type": "DDR5"
+    },
+    {
+      "name": "ASUS TUF Gaming B550M",
+      "category": "Motherboard",
+      "brand": "ASUS",
+      "price": 8000,
+      "supportedSockets": ["AM4"],
+      "supportedRam": ["DDR4"]
+    },
+    {
+      "name": "MSI MAG B660M Mortar",
+      "category": "Motherboard",
+      "brand": "MSI",
+      "price": 9000,
+      "supportedSockets": ["LGA1700"],
+      "supportedRam": ["DDR4"]
+    },
+    {
+      "name": "Samsung 970 EVO Plus 1TB SSD",
+      "category": "Storage",
+      "brand": "Samsung",
+      "price": 7500,
+      "type": "SSD"
+    },
+    {
+      "name": "Seagate Barracuda 2TB HDD",
+      "category": "Storage",
+      "brand": "Seagate",
+      "price": 4000,
+      "type": "HDD"
+    },
+    {
+      "name": "EVGA SuperNOVA 750 G5 PSU",
+      "category": "PSU",
+      "brand": "EVGA",
+      "price": 6000,
+      "wattage": 750
+    },
+    {
+      "name": "Corsair RM650x PSU",
+      "category": "PSU",
+      "brand": "Corsair",
+      "price": 5500,
+      "wattage": 650
+    },
+    {
+      "name": "NZXT H510 Mid Tower Case",
+      "category": "Case",
+      "brand": "NZXT",
+      "price": 4500,
+      "size": "Mid Tower"
+    },
+    {
+      "name": "Cooler Master MasterBox Q300L",
+      "category": "Case",
+      "brand": "Cooler Master",
+      "price": 3000,
+      "size": "Micro ATX"
+    }
+  ]
+  

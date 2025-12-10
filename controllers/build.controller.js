@@ -5,7 +5,12 @@ const client = new OpenAI({
 	apiKey: process.env.HF_API_KEY,
 });
 
+// import fs from 'fs/promises';
 
+// const products = JSON.parse(await fs.readFile('./products.json', 'utf-8'));
+
+// console.log(products);
+    
 const generateBuild = async (req, res) => {
     try {
         const { budget, purpose, brand} = req.body;
@@ -66,7 +71,6 @@ const chatCompletion = await client.chat.completions.create({
 // console.log(chatCompletion.choices[0].message);
 console.log(chatCompletion.choices[0].message.content);
 const message = chatCompletion.choices[0].message.content;
-
 let build;
 try {
     build = JSON.parse(message);
@@ -87,4 +91,14 @@ return res.status(200).json({data: build});
     }
 }
 
+
 export default generateBuild;
+
+/*
+sample
+{
+    "budget": "5000",
+    "purpose": "Gaming",
+    "brand": "AMD"
+}
+*/
