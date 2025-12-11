@@ -5,10 +5,17 @@ A backend  that uses a remote LLM (Hugging Face router) to generate a compatible
 ## Quick start
 
 1. Use the API:
-```
+
 POST /api/pc-builder
 Content-Type: application/json
-Body: { "budget": 50000, "purpose": "gaming", "brand": "AMD" }
+```
+Body: 
+
+{ 
+  "budget": 50000, 
+  "purpose": "gaming", 
+  "brand": "AMD" 
+}
 
 ```
 
