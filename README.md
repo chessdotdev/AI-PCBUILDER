@@ -6,9 +6,11 @@ A backend  that uses a remote LLM (Hugging Face router) to generate a compatible
 
 1. Use the API:
 
-POST /api/pc-builder
+-POST /api/pc-builder
+```
 Content-Type: application/json
-Body: 
+```
+### Body: 
 ```
 { 
   "budget": 50000, 
